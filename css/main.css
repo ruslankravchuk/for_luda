@@ -1,0 +1,12 @@
+div {
+  border: 1px solid red; }
+
+header {
+  display: flex;
+  justify-content: center; }
+  header nav {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    justify-content: right;
+    height: 83%; }
