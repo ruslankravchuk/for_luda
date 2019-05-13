@@ -17,7 +17,15 @@ $border: 1px solid red
 
 =flex 
    display: flex
-   justify-content: center  
+    
+
+a 
+ text-decoration: none
+ color: green
+ border-radius: 32px
+ +flex
+ justify-content: center
+ align-items: center
 
 // =h2_font
 //   font-family: $font
@@ -38,14 +46,13 @@ $border: 1px solid red
 // =borderr
 //    border: 1px solid red
 
-// @mixin bodystyle 
-// 	 background-color: $body-color
-//    font-family: arial, sans-serif, BasisGrotesqueProMedium
-//    color: #0a0a0b 
-//    font-size: 16px
+body 
+ +flex
+ position: relative 
+ justify-content: center
+ width: 100%
+ background-color: lightgrey
 
-// body 
-// 	@include bodystyle 
 
 // section
 //    background-color: $color-main
@@ -58,117 +65,139 @@ $border: 1px solid red
 //    right: 20px
    
 
-div 
+div, nav, ul, li, header, footer, a 
   border: $border
 
 
 // //----------------HEADER------------------------------------------->
-// body 
-//   margin: 0px 0px
 
-
-// // .tech_font
-// //   font-size: 50pt
-// //   color: $spec_font_color
-// .centr
-//   justify-self: center
-
-// .base_general
-//   @include griid
-//   grid-template-columns: 1fr
-//   grid-template-rows: 18.8% 1fr 16.5%  
-//   height: 2930px 
-//   width: auto 
-  
-//   // grid-template-areas: "header_1 header_1 header_1" "main_general main_general main_general " "footer_general footer_general footer_general"
-
-
-// .header_1
-//   display: grid
-//   grid-auto-flow: dense
-//   background-image: url("http://localhost:3000/img/Layer_1.png")
-//   background-position: center
-//   grid-template-rows: 1fr 1fr 1fr
-//   grid-template-columns: 1fr 2fr 1fr
-//   width: max($width_base)
- 
-// .block_6 
-//   position: relative
-//   & i
-//     font-size: 16px
-//     color: white
-//     position: absolute
-//     top: 70%
-//     left: 84%     
- 
-// .block_5
-//   display: grid 
-//   grid-template-rows: 1fr 1fr
-//   grid-column: 1 /3
-//   grid-row: 2 / 4
-//   padding-top: 6%
-//   & img 
-//     grid-row: 1 / span 2 
-//     grid-column: span 2 / span 2
-//     padding-left: 171px
-//   & p
-//     font-size: 30pt
-//     font-family: $font
-//     color: $font_color_head
-//     grid-column: span 2 / span 4
-//     grid-row: 1 / span 2
-//     margin-left: -18%
-//     margin-top: 4%
-//     padding-top: 0%
-//     padding-right: 4%
-//     letter-spacing: 0.7px
-//     line-height: 122%
-
-// .block_1
-//   display: flex
-//   justify-content: flex-end
-//   & img
-//    width: 60px
-//    height: 75px
-//    padding-bottom: 17px
-//   & a 
-//    padding-right: 89px
-//    padding-top: 41px
-   
-
-// .top_menu
-//   & ul
-//     display: flex
-//     justify-content: space-between
-//     width: 65%
-//     padding-left: 0px
-//   & li 
-//     display: flex
-//   & a 
-//     text-decoration: none
-//     color: #d8d8d7
-//     letter-spacing: 0.11em
-//     font-family: $font
-//     font-size: 9pt
-header
+header 
+ min-width: 84%
  +flex
- & nav
-  display: flex
+ justify-content: center
+ position: absolute
+ top: 10%
+ z-index: 1
+ 
+
+
+
+ & .wraper
+  +flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100% 
+  .logo
+   +flex
+   flex-grow: 2
+   justify-content: center
+
+
+ 
+ nav
+  +flex
+  flex-grow: 3
+  justify-content: center
+  
+ ul 
+  +flex
+  list-style: none
   align-items: center
-  width: 97%
-  justify-content: right
-  height: 83%
+  justify-content: space-around
+  padding: 0
+  min-width: 100%
+  flex-wrap: wrap
+
+
+
+ li 
+  +flex 
+  min-width: 18%
+  padding-left: 0%
+  justify-content: space-around
+
+  & a
+   +flex
+   min-width: 100%
+   justify-content: space-around
+
+
+.form_booton
+  min-width: 10%
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+   border-radius: 32px
+   min-width: 47%
+   height: 47%
+   +flex
+   justify-content: center
+   align-items: center
+
+ 
+
+
+
+
 
 
 // //------------------------MAIN!!!!!------------------------------->
 
+main 
+ +flex
+ flex-wrap: wrap
+ flex-direction: column
+ justify-content: space-between
+ align-items: center
+ flex-basis: 100em
+ background-color: rgba(232, 166, 152, 0.3)
+ .emty 
+  +flex
+  flex-grow: 3
+  flex-basis: 19em
+ .fist_main
+  +flex 
+  flex-wrap: wrap
+  flex-basis: 20em
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  min-width: 100%
+  flex-grow: 1
+ .top_block
+  +flex
+  flex-wrap: wrap
+  flex-basis: 20em
+  background-color: green
+  align-items: center
+  flex-grow: 1
+  justify-content: space-around
+ .back_head
+  +flex
+  position: absolute
+  z-index: -1
+  // background-image: url(http://localhost:3000/images/wood_13.jpg)
+  background-color: rgba(245, 245, 122, 0.5)
+  flex-basis: 34em
+  min-height: 39em
+  min-width: 100em
+ .block_news
+  +flex
+  flex-direction: column
+  flex-basis: 23em
+  min-width: 15em
+  min-height: 20em
+  justify-content: space-around
+  & button
+    +flex
+    flex-basis: 3em
 
-// .main_general
-//   background-color: #F8F8F8
-//   +flex 
-//   flex-wrap: wrap
-//   flex-direction: column
-//   width: max($width_base)
+
+
+
+  
+
 
 
 // // div > .main_block_1
