@@ -5,12 +5,24 @@ var gulp        = require('gulp'), // Подключаем Gulp
     smartgrid   = require('smart-grid');
     
 
+    
+// gulp.task('less2sass', function(){ // Создаем таск Sass
+//     return gulp.src('less/**/*.less') // Берем источник
+//         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+//         .pipe(gulp.dest('sass')) // Выгружаем результата в папку app/css
+//         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+// });
+
+
+
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('sass/**/*.sass') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
+
+
 
 gulp.task('styles', function () {
     return gulp.src('scss/*.scss')
@@ -90,12 +102,22 @@ gulp.task('jpg', function() {
 
 });
 
+gulp.task('css', function() {
+  return gulp.src('css/**/*.css')
+  .pipe(browserSync.reload({stream: true}))
+
+});
+
+
+
 gulp.task('watch', function() {
     gulp.watch('sass/**/*.sass', gulp.parallel('smartgrid'));
     gulp.watch('sass/**/*.sass', gulp.parallel('sass'));     // Наблюдение за sass файлами
+    gulp.watch('css/**/*.css', gulp.parallel('css'));
     gulp.watch(['js/**/*.js', 'lib/**/*.js'], gulp.parallel('script'));
     gulp.watch('./index.html', gulp.parallel('kod')); 
     gulp.watch(['images/**/*.jpg', 'images/**/*.png'], gulp.parallel('jpg'));
+    
 
 });
 gulp.task('default', gulp.parallel('sass', 'smartgrid', 'browser-sync', 'watch'));

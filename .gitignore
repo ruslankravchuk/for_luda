@@ -2,3 +2,14 @@ less/
 scss/
 package-lock.json
 package.json
+node_modules/
+.gitignore
+animate.css
+bootstrap.min.css
+owl.carousel.css
+owl.theme.default.css
+lib/
+jquery-3.4.1.js
+jquery.flexslider.js
+bootstrap.min.js
+owl.carousel.js
