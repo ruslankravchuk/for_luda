@@ -1,6 +1,8 @@
-/* This CSS will print because %message-shared is extended. */
 .notShow {
   display: none; }
+
+h2, h1 {
+  text-align: center; }
 
 input {
   outline: 0;
@@ -20,67 +22,176 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: lightgrey;
+  background-image: url("/images/bag_11.jpg");
+  background-size: 10%;
   flex-direction: column;
   align-items: center; }
 
 header {
-  min-width: 84%;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 10%;
-  z-index: 1; }
+  top: 10%; }
   header .wraper {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%; }
+    min-width: 93%;
+    position: fixed;
+    top: 0em;
+    background-image: url("/images/wood_1.jpg");
+    background-size: 10%;
+    z-index: 0;
+    height: 8em; }
+    @media screen and (max-width: 800px) {
+      header .wraper {
+        display: none; } }
+    header .wraper > nav:first-child {
+      padding-left: 0em; }
+    header .wraper > nav:last-child {
+      padding-right: 2em; }
     header .wraper .logo {
-      display: flex;
-      flex-grow: 1;
-      justify-content: center;
-      max-width: 10em; }
+      z-index: 3; }
       header .wraper .logo a {
-        padding: 2% 2%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        padding: 1em 1em;
-        transition: background-color, border-radius, box-shadow, 2s; }
+        padding-top: 4%;
+        transition: box-shadow, transform  2s; }
+        @media screen and (max-width: 1200px) {
+          header .wraper .logo a img {
+            max-width: 85%; } }
         header .wraper .logo a:hover {
-          background-color: rgba(250, 225, 8, 0.7);
-          transform: scale(1.2);
-          border-radius: 30px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+          transform: rotate(180deg); }
   header nav {
     display: flex;
     flex-grow: 3;
-    justify-content: center; }
-  header ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0;
-    min-width: 100%;
-    flex-wrap: wrap; }
-  header li {
-    display: flex;
-    min-width: 18%;
-    padding-left: 0%;
-    justify-content: space-around;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 32px; }
-    header li a {
+    justify-content: center;
+    height: 10em; }
+    header nav ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+      min-width: 100%;
+      flex-wrap: wrap; }
+    header nav li {
+      display: flex;
+      min-width: 18%;
+      padding-left: 0%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 1%; }
+    header nav a {
       display: flex;
       min-width: 100%;
       justify-content: space-around;
-      transition: background-color, box-shadow, color, 1.5s; }
-    header li a:hover {
+      transition: background-color, color, 1.5s;
+      color: rgba(255, 246, 220, 0.9);
+      font-weight: 400;
+      font-size: 1.5em;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      font-family: "Ruslan Display"; }
+    header nav a:hover {
       text-decoration: none;
-      background-color: yellow;
+      background-color: rgba(250, 225, 8, 0.1);
       color: red;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       transform: scale(1.2); }
+
+.wraper_1 {
+  display: none; }
+  @media screen and (max-width: 800px) {
+    .wraper_1 {
+      display: flex; } }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 1em; }
+  main .emty {
+    display: flex;
+    flex-basis: 20em; }
+  main .first_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 10em;
+    margin-top: 16em; }
+    main .first_main div:nth-child(3) a {
+      text-decoration: none;
+      transition: color, transform, 2s;
+      color: rgba(255, 246, 220, 0.9); }
+      main .first_main div:nth-child(3) a:hover {
+        color: yellow;
+        transform: scale(1.3); }
+    main .first_main div {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: 'Ruslan Display';
+      color: rgba(255, 246, 220, 0.9); }
+  main .back_head {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    flex-basis: 34em;
+    min-height: 100%;
+    min-width: 100%; }
+
+.top_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  max-height: 429px; }
+
+.block_news {
+  display: flex;
+  flex-direction: column;
+  max-width: 24%;
+  align-items: center;
+  background-image: url("/images/papers.jpg");
+  background-size: 48%;
+  border-radius: 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: rgba(34, 37, 52, 0.9);
+  padding-top: 1%;
+  margin-top: 2%;
+  position: relative;
+  z-index: 1; }
+  @media screen and (max-width: 1150px) {
+    .block_news {
+      max-width: 15em;
+      font-size: 18px;
+      min-width: 30%; } }
+  .block_news > div:nth-child(3) {
+    padding: 1em;
+    position: relative; }
+    .block_news > div:nth-child(3) > p:nth-child(2) {
+      display: none;
+      padding: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10%; }
+  .block_news button {
+    display: flex;
+    flex-basis: 3em;
+    width: 10em;
+    justify-content: space-around;
+    border-radius: 19px;
+    box-shadow: none;
+    outline-style: none;
+    transition: background-color, transform, color,  2s;
+    margin-bottom: 1em;
+    position: absolute;
+    bottom: 12px; }
+    .block_news button:hover {
+      transform: scale(1.2);
+      background-color: yellow;
+      color: red; }
+    .block_news button i {
+      font-size: 2em; }
 
 .form_booton {
   min-width: 7%;
@@ -88,11 +199,10 @@ header {
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 4;
+  z-index: 1;
   right: 2em;
-  top: 2em;
+  top: 11.3em;
   border-radius: 40px;
-  background-color: rgba(5, 92, 93, 0.9);
   animation-name: call;
   animation-duration: 2s;
   transition: all, 1s;
@@ -108,20 +218,23 @@ header {
     color: lightgrey; }
   .form_booton p {
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: rgba(34, 37, 52, 0.9);
+    font-weight: 700;
+    font-size: 1.1em; }
 
 .hiden {
   display: flex;
   position: fixed;
   flex-direction: column;
   border: 1px solid red;
-  background-color: rgba(253, 158, 237, 0.5);
+  background-image: url("/images/papers.jpg");
   right: 32em;
   top: 10em;
-  max-width: 22em;
+  min-width: 22em;
   min-height: 14em;
   border-radius: 32px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 24px rgba(255, 221, 0, 0.8);
   display: none; }
   .hiden h4 {
     text-align: center; }
@@ -130,10 +243,17 @@ header {
     padding-top: 1em; }
     .hiden div:first-child span {
       position: absolute;
-      top: 0em;
-      right: 2em;
-      font-size: 16px;
-      cursor: pointer; }
+      top: 6%;
+      right: 5%;
+      font-size: 26px;
+      cursor: pointer;
+      font-weight: 100;
+      transition: background-color, border-radius, transform, box-shadow 2s; }
+      .hiden div:first-child span:hover {
+        transform: scale(1.2);
+        background-color: #ff3f05;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   .hiden form {
     display: flex;
     flex-direction: column;
@@ -141,16 +261,19 @@ header {
     justify-content: space-around;
     align-content: space-around;
     z-index: 10; }
-    .hiden form input[type="text"] {
+    .hiden form input[type="text"], .hiden form input[type="tel"] {
       width: 15em;
       height: 2em;
       margin-top: 1%;
       border-radius: 32px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 18px rgba(255, 242, 0, 0.8);
       text-decoration: none;
       outline: 0;
       outline-offset: 0;
-      padding-left: 2%; }
+      padding-left: 4%;
+      background-color: rgba(162, 143, 128, 0.7);
+      font-family: "Neucha";
+      color: darkred; }
     .hiden form input[type="submit"] {
       min-width: 9em;
       margin-top: 4%;
@@ -185,82 +308,6 @@ header {
   100% {
     transform: scale(1); } }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-basis: 100%;
-  min-width: 0;
-  background-color: rgba(232, 166, 152, 0.3);
-  max-width: 100%; }
-  main .emty {
-    display: flex;
-    flex-basis: 20em; }
-  main .first_main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    flex-basis: 10em; }
-    main .first_main div:nth-child(3) a {
-      text-decoration: none;
-      transition: color, transform, 2s; }
-      main .first_main div:nth-child(3) a:hover {
-        color: yellow;
-        transform: scale(1.3); }
-    main .first_main div {
-      display: flex;
-      flex-wrap: wrap; }
-  main .top_block {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 20em;
-    background-color: green;
-    flex-grow: 1;
-    justify-content: space-around; }
-  main .back_head {
-    display: flex;
-    position: absolute;
-    z-index: -1;
-    background-color: rgba(245, 245, 122, 0.5);
-    flex-basis: 34em;
-    min-height: 100%;
-    min-width: 100%; }
-
-.block_news {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 23em;
-  min-width: 15em;
-  min-height: 20em;
-  justify-content: flex-start;
-  align-items: center; }
-  .block_news > div:nth-child(3) > p:nth-child(2) {
-    display: none;
-    padding: 12px;
-    flex-wrap: wrap;
-    opacity: 0;
-    height: 0em; }
-  .block_news button {
-    display: flex;
-    flex-basis: 3em;
-    width: 10em;
-    justify-content: space-around;
-    border-radius: 19px;
-    box-shadow: none;
-    outline-style: none;
-    transition: background-color, transform, color,  2s;
-    margin-bottom: 1em; }
-    .block_news button:hover {
-      transform: scale(1.2);
-      background-color: yellow;
-      color: red; }
-    .block_news button i {
-      font-size: 2em; }
-
 .slide_show {
   position: relative;
   display: flex;
@@ -276,14 +323,18 @@ footer {
   min-width: 100%;
   min-height: 18em;
   justify-content: space-around;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  color: rgba(255, 246, 220, 0.9);
+  font-family: 'Neucha';
+  color: rgba(255, 246, 220, 0.9); }
   footer i {
     font-size: 4em;
     padding: 1%;
     border-radius: 33px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color, transform, color,  3s;
-    cursor: pointer; }
+    cursor: pointer;
+    color: rgba(255, 246, 220, 0.9); }
     footer i:hover {
       background-color: yellow;
       transform: scale(1.3);

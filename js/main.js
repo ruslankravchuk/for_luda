@@ -1,5 +1,5 @@
 window.onload =  function() {
-	var StyleBack = {'background-color': 'rgba(27,223,230,0.8)', 
+	var StyleBack = {'background-color': 'rgba(199, 203, 209, .9)', 
 	'z-index': '2',
 	'position': 'absolute', 
 	'min-width': '100%',
@@ -7,7 +7,7 @@ window.onload =  function() {
 	'display': 'flex',                                     
 };
 var hide_smf = {
-	'display': 'none',
+	'display': '+none',
 };  
 var show_smf =   {
 	'display': 'flex',
@@ -23,7 +23,7 @@ $(".form_booton").hover(function () {
 
 	function(){setTimeout(()=>
 		{$(this).removeClass('animated infinite bounceOutLeft')
-		.css("background-color", "darkgreen")}
+		.css("background-color", "rgba(243, 233, 207, 0.7)")}
 		, 3000)});
 //--------------------------------вІДКРИВАННЯ ВІКНА ФОРМИ--------------//
 $(".form_booton").click(()=>{
@@ -43,41 +43,35 @@ $(".hiden span").click(()=>{$(".hiden").css("display", "none");
 
 //---------------------------------------------ЗМІНА ОБЄКТІВ ПО СКРОЛУ-----------------------//
 
-var blockNews1 = $(".top_block .block_news:first-child");
-var blockNews3 = $(".top_block .block_news:last-child");
-var blockNews2 = $(".top_block .block_news:nth-child(2)");
 var footer_icon = $("footer i");
+var fixet_header = $("header .wraper");
 
-$(window).scroll(
-	(e)=>{ 
+// $(window).scroll(
+// 	(e)=>{ 
 		
-		$(this).scrollTop() >= 200 
-		? $(".botom_on_top").show(500)
+// 		$(this).scrollTop() >= 200 
+// 		? $(".botom_on_top").show(500)
 
-		: $(".botom_on_top").hide(500);
+// 		: $(".botom_on_top").hide(500);
 
+//      ($(this).scrollTop() <= 260 && $("body, html").width() >= 800 ) 
+// 		? $(fixet_header).fadeIn(1000)  
 
-		$(this).scrollTop() >= 700
-		? 
-		($(blockNews1).addClass("animated bounceInLeft"),
-			$(blockNews3).addClass("animated bounceInRight"),
-			$(blockNews2).addClass("animated pulse"))
-		:
-		($(blockNews1).removeClass("animated bounceInLeft"),
-			$(blockNews3).removeClass("animated bounceInRight"),
-			$(blockNews2).removeClass("animated pulse"));
+// 		: $(fixet_header).fadeOut(1000);
+// 		// function () { $(this).removeAttr("style")
 
-      $(this).scrollTop() >= 700
-		? 
-		($(blockNews1).addClass("animated bounceInLeft"),
-			$(blockNews3).addClass("animated bounceInRight"),
-			$(blockNews2).addClass("animated pulse"))
-		:
-		($(blockNews1).removeClass("animated bounceInLeft"),
-			$(blockNews3).removeClass("animated bounceInRight"),
-			$(blockNews2).removeClass("animated pulse"));
+		
+//       $(this).scrollTop() >=800
+// 		? 
+// 		($(blockNews1).addClass("animated bounceInLeft"),
+// 			$(blockNews3).addClass("animated bounceInRight"),
+// 			$(blockNews2).addClass("animated pulse"))
+// 		:
+// 		($(blockNews1).removeClass("animated bounceInLeft").removeAttr('style'),
+// 			$(blockNews3).removeClass("animated bounceInRight").removeAttr('style'),
+// 			$(blockNews2).removeClass("animated pulse")).removeAttr('style');
 
-	});
+// 	});
 
 //----------------------АНІМАЦІЯ ПОВІЛЬНОГО ПЕРЕХОДУ ТОП СТОРІНКИ---------------///
 
@@ -88,64 +82,42 @@ $(".botom_on_top").click((e)=> {
 })
 
 //------------------------------ТЕКСТ ДЛЯ БЛОКІВ З НОВИНАМИ--------------////
+  
+       $(".block_news").each(function (item, elem)
+              { 
+				$(elem).find("button").click( ()=>{Block_show_next(this)});	                   
+				});
+	          
+	function Block_show_next (e) {
+           $("html, body").width() >= 1300 
+		 ? ( width_page = "-26em" )  : (width_page = "0em");
+            $(e).find("p").filter(":last").css({display: "flex"});
+		   
+		 { 
+			//  .find("p").filter(":last").css("backgroundcolor", "black")
+        // $(this).parent().css({marginBottom: width_page}).animate({minHeight: "43em"}, 500); .css("display")
+		// 	$(this).prev().find("p").filter(":last")
+		// 	.css({ 'display': 'flex'}).animate({opacity: 1, 
+		// 	                                     minHeight: "20em" }, 1000, function() {
+		// 	                                     });
+		// 	$(this).children().filter("span").text("Меньше...");
 
-$(".block_news button").click(
-	function () {
-		if ($(this).prev().find("p").filter(":last").css("display") == "none" )
-		{     
-			$(this).prev().find("p").filter(":last")
-			.css(show_smf)
-			.animate({"height": "20em",
-				opacity: 1 }, 2000) }
-			else 	{
-				$(this).prev().find("p").filter(":last")
-				.animate({"height": "0em", 
-					opacity: 0.1}, 2000, function () {
-						$(this).css(hide_smf);
-					}
-					) 
+      	//  }        
+			// else 	{
+			// 	var uuuu = height_block_news.toString();
+			// 	$(this).parent().animate({minHeight: uuuu}, 1000,  function () {
+			// 		$(this).removeAttr('style')});
+			// 	$(this).prev().find("p").filter(":last")
+			// 	.animate({minHeight: "0em", 
+			// 		opacity: 0.1}, 1000, function () {
+						
+			// 			$(this).removeAttr('style');
+			// 							}
+			// 		);
+			//    $(this).children().filter("span").text("Більше...");
+			   
+			 }
 			}
 
-		});
-
-
-   // if ($(this).previousElementSibling.lastElementChild.css("display") == "none") 
-   //    {$(hideP.lastElementChild).css(show_smf)}
-
-   // else {$(hideP.lastElementChild).css(hide_smf)}
-
-
-		// $(".block_news > div:nth-child(3) > p:nth-child(2)").toggle()
-
-		//event.currentTarget
-
-
-
-
-
-   //.animate({opacity: 50, width: 100, height: 200}, 
-   //[duration]('fast' или 'slow' (200 и 600 миллисекунд)), 
-   //[easing]( "linear" и "swing"), 
-   //[callback])
-
-	  // if(top_web.offset.top == 1400) {
-
-   //  	$(".top_block .block_news:first-child")
-   //  	.css("display", "none") }
-
-
-
-
-
-
-
-
-
-};
-
-
- // animated infinite bounceInLeft, animated infinite zoomIn
-
-
-
-
+		
+}
