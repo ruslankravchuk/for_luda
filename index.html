@@ -26,7 +26,7 @@
 <!-- CSS ==================================================
   ================================================== -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/owl.theme.default.css">
@@ -49,12 +49,13 @@
 </head>
 
 <body>
+  <canvas class="anim_fon"></canvas>
   <div class="hiden">
     <div>
       <h4>Будь ласка<br>залиште свій телефона</h4>
       <span>&#10006</span>
     </div>
-    <form  action="">
+    <form >
       <input  name="name" type="text" placeholder="Your name" required autofocus>
       <input name="mobile" type="tel" placeholder="Namber telefon" required>
       <input type="submit" disabled>
@@ -70,24 +71,15 @@
  <!-- Шапка --->
 
  <header>
-  <div class="wraper_1">
-    <nav>
-      <ul>
-       <li><a href="#">Історія</a></li>
-       <li><a href="#">Мої роботи</a></li>
-     </ul>
-   </nav>
-   <div name="top" class="logo">
-     <a href="#"><img src="/images/logo_4.ico" alt=""></a>
-   </div>
-   <nav>
-     <ul>
-       <li><a href="#">Корисні поради</a></li>
-       <li><a href="#">Контакти</a></li>
-     </ul>
-   </nav>
-   
-   
+  <div class="wraper_1">  
+    <section id="Mobile_button">
+      <div>
+         <i class="fas fa-bars"></i>
+       </div>
+      <div>
+        <i class="fas fa-times"></i>
+      </div>
+    </section>
  </div>
 
  <div class="wraper">
@@ -97,9 +89,7 @@
      <li><a href="#">Мої роботи</a></li>
    </ul>
  </nav>
- <div name="top" class="logo">
-   <a href="#"><img src="/images/logo_4.ico" alt=""></a>
- </div>
+    <a href="#" class="logo"><img src="/images/logo_4.ico" alt=""></a>
  <nav>
    <ul>
      <li><a href="#">Корисні поради</a></li>
@@ -135,12 +125,12 @@
                 <img src="https://picsum.photos/id/1000/1280/500"  alt="випадкове_3">
            </div>
            <div class="item">
-                <img src="https://picsum.photos/id/1005/800/500"  alt="випадкове_4">
+                <img src="https://picsum.photos/id/1005/1280/500"  alt="випадкове_4">
            </div>
       </div>
    </div>
-  <div class="top_block">
-    <div  class="block_news">
+  <div class="top_block"> 
+    <div class="block_news">
       <div>
         <h2>Наша якість</h2>
       </div>
@@ -149,18 +139,18 @@
       </div>
       <div>
         <p>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam similique, suscipit accusantium quasi voluptates inventore odit labore amet rem non   veritatis voluptate dolores magnam sapiente, quisquam est! Itaque, facere.
-       </p>
-       <p>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab provident deserunt, veritatis omnis eum cumque animi a necessitatibus? Aut ipsam sint, dolorum eius error amet ducimus iusto alias debitis perferendis.</span>
-        <span>Iure blanditiis, soluta natus necessitatibus corrupti dignissimos enim quidem quisquam nostrum earum omnis quaerat harum consectetur aperiam at illo possimus quos, incidunt, nulla a expedita. Deserunt ipsa amet recusandae libero!</span>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam  similique, suscipit accusantium quasi voluptates inventore odit labore amet rem non   veritatis voluptate dolores magnam sapiente, quisquam est! Itaque, facere.
+        </p>
+        <p>
+           <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab provident deserunt, veritatis omnis eum cumque animi a necessitatibus? Aut ipsam sint, dolorum eius error amet ducimus iusto alias debitis perferendis.</span>
+           <span>Iure blanditiis, soluta natus necessitatibus corrupti  dignissimos    enim quidem quisquam nostrum earum omnis quaerat harum consectetur aperiam at illo possimus quos, incidunt, nulla a expedita. </span>
 
-      </p>
-       </div>
-      <button>
+         </p>
+        </div>
+       <button>
          <i class="fab fa-bitcoin"></i><span>Більше....</span>
       </button>
-    </div>
+       </div>
     <div class="block_news">
         <div>
            <h2>Наша якість</h2>
@@ -174,16 +164,15 @@
            </p>
            <p>
            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam voluptas aliquam accusantium suscipit iure, sed consequatur voluptate, architecto quis deleniti quisquam, fugiat voluptates voluptatem eligendi neque consectetur ratione dolore explicabo.</span>
-           <span>In, quam, quis. Enim ab, in? Placeat cumque laboriosam, mollitia nesciunt ut molestias minus natus, sequi unde sit error recusandae reiciendis dolorem cum beatae sunt deserunt dolor repellat maxime voluptates?</span>
+           <span>In, quam, quis. Enim ab, in? Placeat cumque laboriosam, mollitia nesciunt ut molestias minus natus, sequi unde sit error recusandae reiciendis dolorem cum beatae sunt deserunt ?</span>
 
            </p>
          </div>
         <button>
               <i class="fab fa-bitcoin"></i> <span>Більше....</span>
         </button>
-    </div>
-
-   <div class="block_news" >
+       </div>
+    <div class="block_news" >
        <div>
          <h2>Наша якість</h2>
        </div>
@@ -199,13 +188,13 @@
             <span>Quasi necessitatibus officiis facilis id inventore ex error, neque, odit delectus non hic ab exercitationem numquam ipsa eum accusamus voluptatem consectetur nisi! Dolore hic, mollitia animi obcaecati error nobis eaque!</span>        
          </p>
        </div>
-     <button>
-       <i class="fab fa-bitcoin"></i><span>Більше....</span>
-     </button>
+       <button>
+         <i class="fab fa-bitcoin"></i><span>Більше....</span>
+       </button>
+          </div>
+       <div class="back_head">
+       </div>
   </div>
-<div class="back_head">
-
-</div>
 </main>
 <!--    Підвал    -->
 <footer >
@@ -223,17 +212,17 @@
     </div>
   </div>
   <div class="wraper_footer_2">
-    <div>
-      <p>
-        <h2>Будем вдячні за <span>donate</span></h2>
-      </p>
-    </div>
-    <div>
-     <div><i class="fab fa-cc-visa"></i></div>
-     <div><i class="fab fa-cc-amazon-pay"></i></div>
-     <div><i class="fab fa-cc-mastercard"></i></div>     
-   </div>
- </div>
+     <div>
+       <p>
+          <h2>Будем вдячні за <span>donate</span></h2>
+       </p>
+     </div>
+     <div>
+        <div><i class="fab fa-cc-visa"></i></div>
+        <div><i class="fab fa-cc-amazon-pay"></i></div>
+        <div><i class="fab fa-cc-mastercard"></i></div>     
+     </div>
+  </div>
 </footer>
 </body>
 

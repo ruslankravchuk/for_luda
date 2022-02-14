@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACT,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,gBAAgB,EAAE,KAAK;CAAG",
+    "sources": [
+        "canvas_fon.sass"
+    ],
+    "names": [],
+    "file": "canvas_fon.css"
+}
